@@ -58,10 +58,10 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "ubuntu-20.04.1-legacy-server-amd64.iso",
-        "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04.1-legacy-server-amd64.iso"
+        "ubuntu-20.04.2.0-desktop-amd64.iso",
+        "https://releases.ubuntu.com/20.04/ubuntu-20.04.2.0-desktop-amd64.iso"
       ],
-      "iso_checksum": "sha256:f11bda2f2caed8f420802b59f382c25160b114ccc665dbac9c5046e7fceaced2",
+      "iso_checksum": "sha256:93bdab204067321ff131f560879db46bee3b994bf24836bb78538640f689e58f",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -85,19 +85,7 @@
         ]
       ]
     }
-  ],
-  "post-processors": [
-    [
-      {
-        "output": "builds/{{.Provider}}-ubuntu2004.box",
-        "type": "vagrant"
-      },
-      {
-        "type": "vagrant-cloud",
-        "box_tag": "geerlingguy/ubuntu2004",
-        "version": "{{user `version`}}"
-      }
-    ]
   ]
+  
 }
 
